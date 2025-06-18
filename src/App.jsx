@@ -1,35 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import Navbar from "./assets/components/Navbar";
+import ProfileCard from "./assets/components/ProfileCard";
+import About from "./assets/components/About";
+import Technologies from "./assets/components/Technologies";
+import "./assets/css/output.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
+    <div className="font-[Poppins]">
+      <Navbar />
+      <div className="mb-30">
+        <ProfileCard />
+      </div>
+      <div className="mb-30">
+        <About />
+      </div>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <Technologies />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
