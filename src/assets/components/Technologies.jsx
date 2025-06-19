@@ -1,9 +1,9 @@
 import React from "react";
 
-function Technologies() {
+function Technologies({ ref }) {
   return (
-    <div>
-      <div className="flex flex-col items-center gap-2 mb-10">
+    <div ref={ref}>
+      <div className="flex flex-col items-center gap-2  mb-10">
         <p className="font-medium text-xl text-gray-500/60">Explore My</p>
         <h2 className="font-medium text-5xl">Technologies</h2>
       </div>

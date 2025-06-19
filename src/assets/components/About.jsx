@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "../images/about-me.jpg";
-function About() {
+
+function About({ ref }) {
   const occupation = [
     {
       icon: "fa-solid fa-award text-white text-2xl",
@@ -17,7 +18,7 @@ function About() {
   ];
 
   return (
-    <section className="flex flex-col items-center ">
+    <section className="flex flex-col items-center " ref={ref}>
       <div className="flex flex-col items-center gap-2 mb-10">
         <p className="font-medium text-xl text-gray-500/60">Get to know more</p>
         <h2 className="font-medium text-5xl">About Me</h2>

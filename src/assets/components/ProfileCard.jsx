@@ -1,17 +1,17 @@
 import React from "react";
 import Profile from "../images/profile.png";
-function ProfileCard() {
+function ProfileCard({ onClick }) {
   return (
     <div className="flex items-center justify-center gap-4 mt-15">
       <div className="flex items-center">
         <img src={Profile} className="w-100 rounded-4xl h-full"></img>
       </div>
-      <ProfileGroup />
+      <ProfileGroup onClick={onClick} />
     </div>
   );
 }
 
-function ProfileGroup() {
+function ProfileGroup({ onClick }) {
   return (
     <section className="flex flex-col items-center gap-6">
       <div className="flex items-center flex-col gap-3">
@@ -23,11 +23,21 @@ function ProfileGroup() {
       </div>
 
       <div className="flex gap-2 items-center">
-        <button className="btn btn-primary rounded-2xl p-3 w-40">
-          Download CV
+        <button
+          className="btn btn-primary rounded-2xl p-3 w-40"
+          onClick={() => {
+            window.location = "https://scarlet-merry-85.tiiny.site";
+          }}
+        >
+          Resume
+          <i class="fa-solid fa-file"></i>
         </button>
-        <button className="btn btn-neutral rounded-2xl p-3 w-40">
+        <button
+          className="btn btn-neutral rounded-2xl p-3 w-40"
+          onClick={onClick}
+        >
           Contact Info
+          <i class="fa-solid fa-address-book"></i>
         </button>
       </div>
       <Socials />
@@ -38,9 +48,20 @@ function ProfileGroup() {
 function Socials() {
   return (
     <div className="flex items-center gap-4 cursor-pointer">
-      <i class="fa-brands fa-github text-3xl"></i>
-      <i class="fa-brands fa-instagram text-3xl"></i>
-      <i class="fa-brands fa-facebook text-3xl"></i>
+      <i
+        title="Instagram Profile"
+        class="fa-brands fa-instagram text-3xl"
+        onClick={() => {
+          window.location = "https://www.instagram.com/devwindyl/";
+        }}
+      ></i>
+      <i
+        title="Facebook Profile"
+        class="fa-brands fa-facebook text-3xl"
+        onClick={() => {
+          window.location = "https://www.facebook.com/windyl.monton.3";
+        }}
+      ></i>
     </div>
   );
 }

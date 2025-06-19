@@ -1,8 +1,8 @@
 import React from "react";
 
-function Contact() {
+function Contact({ ref }) {
   return (
-    <div className="flex flex-col items-center gap-5">
+    <div className="flex flex-col items-center gap-5" ref={ref}>
       <div className="flex flex-col items-center gap-2 mb-10">
         <p className="font-medium text-xl text-gray-500/60">Get in Touch</p>
         <h2 className="font-medium text-5xl">Contact Me</h2>

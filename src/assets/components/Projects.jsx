@@ -5,11 +5,11 @@ import Weather from "../images/weather-app.png";
 import Surebank from "../images/sure-bank.png";
 import toast, { Toaster } from "react-hot-toast";
 
-function Projects() {
+function Projects({ ref }) {
   const style = "h-10";
   const notify = () => toast.error("No available demo yet :)");
   return (
-    <div>
+    <div ref={ref}>
       <Toaster />
       <div className="flex flex-col items-center gap-2 mb-10">
         <p className="font-medium text-xl text-gray-500/60">Browse My Recent</p>

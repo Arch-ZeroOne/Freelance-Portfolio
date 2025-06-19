@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useRef, use } from "react";
 import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+
 import Navbar from "./assets/components/Navbar";
 import ProfileCard from "./assets/components/ProfileCard";
 import About from "./assets/components/About";
@@ -10,23 +10,56 @@ import Contact from "./assets/components/Contact";
 import "./assets/css/output.css";
 
 function App() {
+  const aboutRef = useRef(null);
+  const techRef = useRef(null);
+  const projRef = useRef(null);
+  const contactRef = useRef(null);
+
+  const scrollToAbout = () => {
+    aboutRef.current.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
+  const scrollToTech = () => {
+    techRef.current.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
+  const scrollToProj = () => {
+    projRef.current.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
+  const scrollToContact = () => {
+    contactRef.current.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
   return (
     <div className="font-[Poppins]">
-      <Navbar />
+      <Navbar
+        onClickAbout={scrollToAbout}
+        onClickTech={scrollToTech}
+        onClickProj={scrollToProj}
+        onClickContact={scrollToContact}
+      />
       <div className="mb-30">
-        <ProfileCard />
+        <ProfileCard onClick={scrollToContact} />
       </div>
       <div className="mb-30">
-        <About />
+        <About ref={aboutRef} />
       </div>
       <div className="mb-30">
-        <Technologies />
+        <Technologies ref={techRef} />
       </div>
       <div className="mb-30">
-        <Projects />
+        <Projects ref={projRef} />
       </div>
       <div className="mb-10">
-        <Contact />
+        <Contact ref={contactRef} />
       </div>
     </div>
   );
