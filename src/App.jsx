@@ -5,6 +5,8 @@ import Navbar from "./assets/components/Navbar";
 import ProfileCard from "./assets/components/ProfileCard";
 import About from "./assets/components/About";
 import Technologies from "./assets/components/Technologies";
+import Projects from "./assets/components/Projects";
+import Contact from "./assets/components/Contact";
 import "./assets/css/output.css";
 
 function App() {
@@ -17,8 +19,14 @@ function App() {
       <div className="mb-30">
         <About />
       </div>
-      <div>
+      <div className="mb-30">
         <Technologies />
+      </div>
+      <div className="mb-30">
+        <Projects />
+      </div>
+      <div className="mb-10">
+        <Contact />
       </div>
     </div>
   );
