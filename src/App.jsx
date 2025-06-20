@@ -1,6 +1,5 @@
 import { useState, useRef, use } from "react";
 import reactLogo from "./assets/react.svg";
-
 import Navbar from "./assets/components/Navbar";
 import ProfileCard from "./assets/components/ProfileCard";
 import About from "./assets/components/About";
@@ -38,6 +37,7 @@ function App() {
       behavior: "smooth",
     });
   };
+
   return (
     <div className="font-[Poppins]">
       <Navbar

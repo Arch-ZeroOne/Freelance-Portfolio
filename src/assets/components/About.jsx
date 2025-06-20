@@ -24,10 +24,10 @@ function About({ ref }) {
         <h2 className="font-medium text-5xl">About Me</h2>
       </div>
 
-      <div className="flex items-center gap-10 mb-5 justify-center">
+      <div className="flex flex-col md:flex-row  items-center gap-8  mb-5 justify-center">
         <Occupation />
-        <section className="flex flex-col items-center gap-8">
-          <div className="flex items-center gap-8">
+        <section className="flex flex-col items-center gap-10 ">
+          <div className="flex items-center h-full gap-2 ">
             {occupation.map((item) => (
               <Card
                 icon={item.icon}
@@ -46,8 +46,11 @@ function About({ ref }) {
 
 function Occupation() {
   return (
-    <div>
-      <img src={Image} className="h-full w-90 rounded-3xl  shadow-4xl"></img>
+    <div className="flex  justify-center ">
+      <img
+        src={Image}
+        className="h-120 w-full rounded-3xl  shadow-4xl mb-10"
+      ></img>
     </div>
   );
 }
@@ -55,7 +58,7 @@ function Occupation() {
 function Card({ icon, title, job, duration }) {
   return (
     <div>
-      <div className="card bg-neutral text-neutral-content w-65 h-60  rounded-4xl">
+      <div className="card bg-neutral text-neutral-content w-50 h-60 md:w-70 rounded-4xl">
         <div className=" flex flex-col items-center justify-center text-center gap-2 h-full p-2">
           <i className={icon}></i>
           <h2 className="card-title">{title}</h2>
@@ -69,7 +72,7 @@ function Card({ icon, title, job, duration }) {
 
 function Intro() {
   return (
-    <div className="flex w-130  h-50">
+    <div className="flex w-95 sm:w-100 md:w-130  h-50">
       <p className="indent-5 text-gray-700/80">
         Hi! I’m Windyl Monton, an aspiring Software Engineer passionate about
         building responsive, user-friendly, and full-stack web applications.

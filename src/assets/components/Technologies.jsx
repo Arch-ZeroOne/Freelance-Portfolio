@@ -17,7 +17,7 @@ function Technologies({ ref }) {
 function Languages() {
   const style = "h-15";
   return (
-    <div className="grid grid-cols-7 gap-8 w-[80%] mr-auto ml-auto">
+    <div className="grid  grid-cols-2 justify-items-center sm:grid-cols-3 md:grid-cols-5 gap-8 w-[80%] mr-auto ml-auto">
       <img
         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
         className={style}

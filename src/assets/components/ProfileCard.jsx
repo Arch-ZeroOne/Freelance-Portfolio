@@ -2,7 +2,7 @@ import React from "react";
 import Profile from "../images/profile.png";
 function ProfileCard({ onClick }) {
   return (
-    <div className="flex items-center justify-center gap-4 mt-15">
+    <div className="flex flex-col md:flex-row items-center justify-center gap-4 mt-15">
       <div className="flex items-center">
         <img src={Profile} className="w-100 rounded-4xl h-full"></img>
       </div>
@@ -14,10 +14,12 @@ function ProfileCard({ onClick }) {
 function ProfileGroup({ onClick }) {
   return (
     <section className="flex flex-col items-center gap-6">
-      <div className="flex items-center flex-col gap-3">
-        <p className="font-bold text-2xl text-gray-500/60">Hello, I' m</p>
-        <h2 className="text-5xl font-bold">Windyl P. Monton</h2>
-        <h2 className="font-bold text-3xl text-gray-500/60">
+      <div className="flex items-center flex-col gap-3 sm:text-center">
+        <p className="font-bold text-3xl md:text-4xl text-gray-500/60">
+          Hello, I' m
+        </p>
+        <h2 className="text-3xl  md:text-4xl font-bold">Windyl P. Monton</h2>
+        <h2 className="font-bold text-2xl md:text-4xl text-gray-500/60">
           Aspiring Software Engineer
         </h2>
       </div>
